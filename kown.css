@@ -1,0 +1,82 @@
+main{
+    display: flex;
+  }
+  
+  /* 文章样式 */
+  article {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #efb78a;
+    width: 600px;
+    flex-grow: 2;
+  }
+  
+/* 标题样式 */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* 列表样式 */
+  ol {
+    padding-left: 20px;
+  }
+  
+  ol li {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* 链接样式 */
+  article a {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0077cc;
+  }
+  
+  article a:hover {
+    color: #ff6347;
+  }
+
+  /* 在屏幕宽度小于768px时的样式 */
+@media (max-width: 767px) {
+  article {
+    width: 100%; /* 文章宽度占据整个屏幕宽度 */
+    padding: 15px; /* 调整文章内边距 */
+  }
+
+  h1 {
+    font-size: 24px; /* 标题字体大小调整 */
+    margin-bottom: 15px; /* 调整标题底部间距 */
+  }
+
+  ol li {
+    margin-bottom: 10px; /* 调整列表项间距 */
+  }
+
+  article a {
+    margin-top: 15px; /* 调整链接顶部间距 */
+  }
+}
+
+/* 在屏幕宽度介于768px和1200px之间时的样式 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  article {
+    width: 90%; /* 文章宽度占据90%的屏幕宽度 */
+    margin: 0 auto; /* 居中显示 */
+  }
+}
+
+/* 在屏幕宽度大于1200px时的样式 */
+@media (min-width: 1200px) {
+  article {
+    width: 600px; /* 恢复文章固定宽度 */
+    margin: 0 auto; /* 居中显示 */
+  }
+}
+  

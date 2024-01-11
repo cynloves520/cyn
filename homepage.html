@@ -1,0 +1,134 @@
+<html>
+<head>
+    <link href="first.css" rel="stylesheet">
+    <link href="homepage.css" rel = "stylesheet">
+    <script src="homepage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-abcdef..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=FontName&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zao+Zi+Gong+Fang+Tong+Xin&display=swap">
+    <title>猫呜居</title>
+</head>    
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/tile.jpg" alt="网站logo">
+      <p>猫呜居-爱猫人士聚集地</p>
+    </div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="homepage.html">首页</a></li>
+        <li><a href="connect.html">养宠小常识</a></li>
+        <li><a href="not yet.html">待领养</a></li>
+        <li><a href="alredy.html">已领养</a></li>
+        <li><a href="agreement.html">领养协议</a></li>
+      </ul>
+    </div>
+  </div>    
+      
+    <main >
+      <article>
+		<div class="lunbo">
+			<div class="content">
+			<ul id="item">
+				<li class="item">
+					<a href="#"><img src="images/jiujiu1.jpg" ></a>
+				</li>
+				<li class="item">
+					<a href="#"><img src="images/jiujiu2.jpg" ></a>
+				</li>
+				<li class="item">
+					<a href="#"><img src="images/jiujiu3.jpg" ></a>
+				</li>
+				<li class="item">
+					<a href="#"><img src="images/jiujiu4.jpg" ></a>
+				</li>
+				<li class="item">
+					<a href="#"><img src="images/jiujiu5.jpg" ></a>
+				</li>
+			</ul>
+			<div id="btn-left"><</div>
+			<div id="btn-right">></div>
+			<ul id="circle">
+				
+				<li class="circle"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+				<li class="circle"></li>
+			</ul>
+			</div>
+		</div>
+
+    <h1>我们是谁</h1>
+    <p>欢迎来到喵呜居！这里是一个致力于拯救流浪猫、关爱弱势猫咪的救助中心。我们坚定地以对动物福利的热情为基础建立了这个中心，致力于为流浪猫提供爱、庇护和更加美好的未来。</p>
+    <h2>我们的使命</h2>
+    <p> 在喵呜居，我们的使命深深植根于对社区流浪猫群体的同情和体谅。我们致力于拯救、康复和重新安置这些弱势动物，旨在为它们创造一个更安全、更有爱的环境。通过我们的不懈努力，我们希望提高人们对动物福利重要性的认识，并倡导对所有生物的人道主义对待。</p>
+    <h3>我们需要您的帮助</h3>
+    <p>喵呜居希望得到更多的支持和关注。如果您愿意加入我们的行列，成为志愿者，捐赠物资或资金，或者提供流浪猫的领养帮助，我们将不胜感激。您的支持将帮助我们拯救更多无助的生命，为它们带来温暖和关怀。</p>
+    
+      </article>
+
+    <aside>
+      <h2>
+        月度人气猫咪
+      </h2>
+
+      <div class="photos-container">
+      <ul class="photos">
+        <li>
+    <img src="images/微信图片_20231213022948.jpg">
+        </li>
+        <li>
+          <img src="images/微信图片_202312130229481.jpg">
+        </li>
+        <li>
+          <img src="images/微信图片_202312130229484.jpg">
+        </li>
+        <li>
+          <img src="images/微信图片_202312130229483.jpg">
+        </li>
+      </ul>
+    </div>
+    </aside>    
+
+  <div id="pet"></div>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h2>亲爱的访问者</h2>
+      <p>帮帮孩子们吧！欢迎捐助：</p>
+      <img class="modal-img" src="images/help.jpg" alt="捐助二维码">
+      <form id="myForm">
+        <form id="myForm">
+        <input type="text" class="form-input" placeholder="请输入您的名字" id="username">
+        <button type="button" onclick="submitForm()">提交</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="click.js"></script>
+    
+  </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="address">
+                <h3>我们的地址</h3>
+                <p>123 猫咪街</p>
+                <p>猫乐园市，猫国</p>
+            </div>
+            <div class="contact-info">
+                <h3>联系方式</h3>
+                <p>电话：+123456789</p>
+                <p>邮箱：info@meowexchange.com</p>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2023喵呜居-爱猫人士聚集地</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+main{
+  display: flex;
+}
+
+/* 文章样式 */
+article {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #efb78a;
+  width: 600px;
+  flex-grow: 2;
+}
+
+article h1,
+article h2,
+article h3 {
+  color: #333;
+  font-size: 24px;
+  text-align: left;
+}
+
+article p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 20px; /* 调整段落之间的间距 */
+}
+
+article img{
+  width: 330px;
+  float: left;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 侧边框样式 */
+aside{
+  width: 100px;
+  flex-grow: 1;
+}
+
+
+aside .photos-container {
+  max-height: 800px; /* 设置最大高度 */
+  overflow-y: scroll; /* 添加垂直滚动条 */
+}
+
+aside .photos {
+  display: flex;
+  flex-direction: column; /* 设置竖直排列 */
+  gap: 10px; 
+  padding: 0; 
+  margin: 0;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  list-style: none;
+}
+
+aside .photos li {
+  list-style: none; /* 去除列表样式 */
+}
+
+aside .photos img {
+  max-width: 100%; /* 图片最大宽度 */
+}
+
+/*图片轮播*/
+*{
+	margin: 0;
+	padding: 0;
+}
+article a{
+	list-style: none;
+}
+li{
+	list-style: none;
+}
+.lunbo{
+	width: 610px;
+  height: 410px;
+}
+.content{
+	width: 600px;
+	height: 400px;
+	margin: 20px auto;
+	position: relative;
+}
+#item{
+	width: 100%;
+	height: 100%;
+	
+}
+.item{
+	position: absolute;
+	opacity: 0;
+	transition: all 1s;
+	
+}
+.item img{
+  width: 600px;
+  height: 400px;
+
+}
+.item.active{
+	opacity:1;
+}
+
+#btn-left{
+	width: 30px;
+	height: 69px;
+	font-size: 30px;
+	color: white;
+	background-color:rgba(0,0,0,0.4);
+	line-height: 69px;
+	padding-left:5px;
+	z-index: 10;/*始终显示在图片的上层*/
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-60%);/*使按钮向上偏移居中对齐*/
+	cursor: pointer;
+	opacity: 0;/*平时隐藏*/
+}
+.lunbo:hover #btn-left{
+	/*鼠标滑入，显示图标*/
+	opacity: 1;
+}
+
+#btn-right{
+	width: 26px;
+	height: 69px;
+	font-size: 30px;
+	color: white;
+	background-color:rgba(0,0,0,0.4);
+	line-height: 69px;
+	padding-left: 5px;
+	z-index: 10;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	cursor: pointer;
+	opacity: 0;
+	transform: translateY(-60%);
+}
+.lunbo:hover #btn-right{
+	opacity: 1;
+}
+#circle{
+	height: 20px;
+	display: flex;
+	position: absolute;
+	bottom: 35px;
+	right: 25px;
+}
+.circle{
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border: 2px solid white;
+	background: rgba(0,0,0,0.4);
+	cursor: pointer;
+	margin: 5px;
+}
+.white{
+	background-color: #FFFFFF;
+}
+
+#pet {
+	position: absolute;
+	left: 20px; /* 固定在页面左侧 */
+	top: 50%; /* 垂直居中 */
+	transform: translateY(-50%);
+	width: 140px;
+	height: 140px;
+	background-image: url('images/catcat.png');
+	background-size: cover;
+	z-index: 9999;
+	}
+.modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	z-index: 10000;
+}
+
+.modal-content {
+	text-align: center;
+}
+.modal-img {
+	max-width: 200px;
+	max-height: 200px;
+	margin-top: 20px;
+}
+.close-btn {
+	cursor: pointer;
+	color: #777;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+@media (max-width: 767px) {
+	aside {
+		display: none; /* 在小屏幕上隐藏侧边栏 */
+	  }
+
+	article {
+	  width: 100%; /* 文章宽度占据整个屏幕宽度 */
+	  margin: 0 10px; /* 添加左右边距 */
+	}
+  
+	article img {
+	  width: 100%; /* 图片宽度占据整个父容器宽度 */
+	  max-width: none; /* 移除最大宽度限制 */
+	  float: none; /* 移除浮动 */
+	}
+  
+	.lunbo {
+	  width: 100%; /* 图片轮播宽度占据整个屏幕宽度 */
+	  height: auto; /* 自适应高度 */
+	  max-width: none; /* 移除最大宽度限制 */
+	  margin: 20px auto; /* 调整轮播图的外边距 */
+	}
+}
+  
+  /* 在屏幕宽度介于768px和1023px之间时的样式 */
+  @media (min-width: 768px) and (max-width: 1023px) {
+	article {
+	  width: 90%; /* 文章宽度占据90%的屏幕宽度 */
+	  margin: 0 auto; /* 居中显示 */
+	}
+  
+	.lunbo {
+	  width: 90%; /* 图片轮播宽度占据90%的屏幕宽度 */
+	  height: auto; /* 自适应高度 */
+	  max-width: none; /* 移除最大宽度限制 */
+	  margin: 20px auto; /* 调整轮播图的外边距 */
+	}
+  }
+  
+  /* 在屏幕宽度大于1023px时的样式 */
+  @media (min-width: 1024px) {
+	article {
+	  width: 600px; 
+	  margin: 0 auto; /* 居中显示 */
+	}
+  
+	article img {
+	  width: 330px; /* 恢复图片固定宽度 */
+	  max-width: 100%; /* 图片最大宽度 */
+	  float: left; /* 左浮动 */
+	}
+  
+	.lunbo {
+	  width: 610px; /* 恢复图片轮播固定宽度 */
+	  height: 410px; /* 恢复图片轮播固定高度 */
+	  max-width: none; /* 移除最大宽度限制 */
+	  margin: 20px auto; /* 调整轮播图的外边距 */
+	}
+  }

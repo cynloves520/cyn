@@ -1,0 +1,51 @@
+section img{
+    width: 360px;
+}
+.hhi{
+    background-color: #95c6e4;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+}
+
+/* 在屏幕宽度小于768px时的样式 */
+@media (max-width: 767px) {
+    section img {
+      width: 100%; /* 图片宽度占据整个父容器宽度 */
+    }
+  
+    .hhi {
+      grid-template-columns: 1fr; /* 小屏幕下只显示一列 */
+      grid-row-gap: 15px; /* 调整行间距 */
+      grid-column-gap: 15px; /* 调整列间距 */
+    }
+  }
+  
+  /* 在屏幕宽度介于768px和1023px之间时的样式 */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    section img {
+      width: 280px; /* 图片宽度调整 */
+    }
+  
+    .hhi {
+      grid-template-columns: 1fr 1fr; /* 显示两列 */
+      grid-row-gap: 20px; /* 调整行间距 */
+      grid-column-gap: 20px; /* 调整列间距 */
+    }
+  }
+  
+  /* 在屏幕宽度大于1023px时的样式 */
+  @media (min-width: 1024px) {
+    section img {
+      width: 360px; /* 恢复图片固定宽度 */
+    }
+  
+    .hhi {
+      grid-template-columns: 1fr 1fr 1fr; /* 显示三列 */
+      grid-row-gap: 30px; /* 恢复原始行间距 */
+      grid-column-gap: 30px; /* 恢复原始列间距 */
+    }
+  }
+  

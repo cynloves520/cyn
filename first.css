@@ -1,0 +1,197 @@
+main{
+    display: flex;
+  }
+
+  /* 导航栏样式 */
+  .navbar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    padding: 20px 20px;
+    font-size: 18px;
+  }
+  
+  /* 使用字体文件 */
+  @font-face {
+    font-family: 'iconfont';
+    src: url(Fonts/1.svg),
+         url(Fonts/1.ttf),
+         url(Fonts/1.woff);
+  }
+
+  @font-face {
+    font-family: 'CustomFont'; 
+    src: url(Fonts/2.ttf) ;
+  }
+
+  aside h2 {
+    font-family: 'CustomFont';
+    text-align: center;
+    font-size: 30px;
+
+  }
+  
+  body {
+    background: linear-gradient(#efccaf, rgb(193, 193, 177));
+    margin: 0 auto;
+    max-width: 1200px; /* 限制页面最大宽度 */
+    padding: 0 20px; /* 为内容留出空间 */
+  }
+  
+  /* 底部渐变边框 */
+  .navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #241d20, transparent);
+  }
+  
+  /* 网站 logo 样式 */
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: auto;
+    opacity: 0.9;
+    margin-right: 20px;
+    mix-blend-mode: multiply;
+  }
+  
+  .logo p {
+    margin: 0;
+    font-size: 33px;
+    font-weight: 700;
+    font-family: 'iconfont';
+    background: linear-gradient(to right, transparent, #f9b57d, transparent);
+  }
+  
+  /* 右侧链接样式 */
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 30px;
+  }
+  
+  .nav-links a, .login-link a {
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover, .login-link a:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-links {
+    display: inline;
+    text-decoration: none;
+    background-color: #413333;
+    border-radius: 18px;
+    height: 30px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: .4em 1em;
+  }
+  
+  /* 页脚样式 */
+  footer {
+    background-color: #413333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6; 
+    font-size: 16px; 
+  }
+
+/* 页脚内容区域样式设置 */
+.footer-content {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+/* 地址和联系方式样式设置 */
+.address, .contact-info {
+  flex: 1; 
+  padding: 0 10px; 
+}
+
+.address h3, .contact-info h3 {
+  margin-bottom: 10px; 
+}
+
+.address p, .contact-info p {
+  line-height: 1.6; 
+  margin-bottom: 8px; 
+}
+
+/* 版权信息样式设置 */
+.copy {
+  margin-top: 20px;
+}
+
+.copy p {
+  font-size: 14px; 
+}
+
+  /* 在屏幕宽度小于768px时的样式 */
+  @media (max-width: 767px) {
+    /* 导航栏样式调整 */
+    .navbar {
+      flex-direction: column; /* 垂直排列 */
+      padding: 15px; /* 调整内边距 */
+    }
+  
+    .logo {
+      display: none; /* 隐藏 logo 部分 */
+    }
+  
+    .nav-links ul {
+      flex-direction: column; /* 垂直排列 */
+      align-items: center; /* 居中对齐 */
+    }
+  
+    .nav-links li {
+      margin: 10px 0; /* 调整列表项间距 */
+    }
+  
+    /* 页脚样式调整 */
+    footer {
+      padding: 15px; /* 调整内边距 */
+      font-size: 20px; /* 放大页脚文字 */
+    }
+  
+    .footer-content {
+      flex-direction: row; /* 水平排列 */
+      justify-content: space-around; /* 空间均分 */
+      align-items: center; /* 居中对齐 */
+    }
+  
+    .address,
+    .contact-info {
+      padding: 0; /* 取消内边距 */
+      text-align: center; /* 文字居中 */
+    }
+  }
